@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ImageWriterHandler {
+class ImageWriterHandler: ImageHandler {
     
     var image: UIImage!
     
     @available(*, unavailable, message: "use the custom init")
-    init() {
+    override init() {
         
     }
     
@@ -30,9 +30,9 @@ class ImageWriterHandler {
         
         do {
             let fileName = self.fileName
-            let path = self.filePath()
+            let path = fileDirectoryPath
             let filePath = path + "/" + fileName
-            if let jpegData = UIImageJPEGRepresentation(image, CGFloat(ImageCompressionScale.scale)) {
+            if let jpegData = UIImagePNGRepresentation(image) {
                 let fileURLPath = URL(fileURLWithPath: filePath)
                 try jpegData.write(to: fileURLPath, options: .atomicWrite)
                 result = true
@@ -48,14 +48,8 @@ class ImageWriterHandler {
     // MARK: Private functions
     private var fileName: String {
         get {
-            return NSUUID().uuidString + ".jpeg"
+            return NSUUID().uuidString + "." + fileExtension
         }
-    }
-    
-    private func filePath() -> String {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        
-        return documentsPath
     }
 }
 

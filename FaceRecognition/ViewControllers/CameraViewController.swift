@@ -91,11 +91,14 @@ private extension CameraViewController {
                 print(error ?? "Image capture error")
                 return
             }
-            
-            try? PHPhotoLibrary.shared().performChangesAndWait {
-                PHAssetChangeRequest.creationRequestForAsset(from: image)
-            }
         }
+    }
+    
+    func showMatchPredictViewController(sourceImage: UIImage) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MatchPredictViewController") as! MatchPredictViewController
+        controller.sourceImage = sourceImage
+        self.show(controller, sender: self)
     }
 }
 

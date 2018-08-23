@@ -133,7 +133,12 @@
 		A6E83DD6212AE98C00644E9E /* ImageWriteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DD5212AE98C00644E9E /* ImageWriteHandler.swift */; };
 		A6E83DD8212AFEB300644E9E /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DD7212AFEB300644E9E /* CameraHandler.swift */; };
 		A6E83DDA212BE8F300644E9E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DD9212BE8F300644E9E /* CameraViewController.swift */; };
-		A6E83DDD212BFE1C00644E9E /* MatchPredicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DDC212BFE1C00644E9E /* MatchPredicationViewController.swift */; };
+		A6E83DDD212BFE1C00644E9E /* MatchPredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DDC212BFE1C00644E9E /* MatchPredictViewController.swift */; };
+		A6E83DDF212C046B00644E9E /* FaceRekognitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DDE212C046B00644E9E /* FaceRekognitionHandler.swift */; };
+		A6E83DE2212C365D00644E9E /* ImagerReaderHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DE1212C365D00644E9E /* ImagerReaderHandler.swift */; };
+		A6E83DE4212C368600644E9E /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DE3212C368600644E9E /* ImageHandler.swift */; };
+		A6E83DE8212C5F6500644E9E /* detect-analyze-faces-rekognition-sample2.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E83DE7212C5F6500644E9E /* detect-analyze-faces-rekognition-sample2.png */; };
+		A6E83DEA212E848E00644E9E /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E83DE9212E848D00644E9E /* CaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,7 +266,12 @@
 		A6E83DD5212AE98C00644E9E /* ImageWriteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWriteHandler.swift; sourceTree = "<group>"; };
 		A6E83DD7212AFEB300644E9E /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		A6E83DD9212BE8F300644E9E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		A6E83DDC212BFE1C00644E9E /* MatchPredicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredicationViewController.swift; sourceTree = "<group>"; };
+		A6E83DDC212BFE1C00644E9E /* MatchPredictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPredictViewController.swift; sourceTree = "<group>"; };
+		A6E83DDE212C046B00644E9E /* FaceRekognitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRekognitionHandler.swift; sourceTree = "<group>"; };
+		A6E83DE1212C365D00644E9E /* ImagerReaderHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagerReaderHandler.swift; sourceTree = "<group>"; };
+		A6E83DE3212C368600644E9E /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		A6E83DE7212C5F6500644E9E /* detect-analyze-faces-rekognition-sample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detect-analyze-faces-rekognition-sample2.png"; sourceTree = "<group>"; };
+		A6E83DE9212E848D00644E9E /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +378,7 @@
 		A6949F3B212A798500E17558 = {
 			isa = PBXGroup;
 			children = (
+				A6E83DE7212C5F6500644E9E /* detect-analyze-faces-rekognition-sample2.png */,
 				A6949F46212A798500E17558 /* FaceRecognition */,
 				A6949F5B212A799200E17558 /* FaceRecognitionTests */,
 				A6949F66212A799200E17558 /* FaceRecognitionUITests */,
@@ -486,7 +497,8 @@
 				A6949F49212A798500E17558 /* OptionsViewController.swift */,
 				A6E83D85212AC53200644E9E /* ImageSourceOptionsViewController.swift */,
 				A6E83DD9212BE8F300644E9E /* CameraViewController.swift */,
-				A6E83DDC212BFE1C00644E9E /* MatchPredicationViewController.swift */,
+				A6E83DDC212BFE1C00644E9E /* MatchPredictViewController.swift */,
+				A6E83DE9212E848D00644E9E /* CaptureViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -496,6 +508,9 @@
 			children = (
 				A6E83DD5212AE98C00644E9E /* ImageWriteHandler.swift */,
 				A6E83DD7212AFEB300644E9E /* CameraHandler.swift */,
+				A6E83DDE212C046B00644E9E /* FaceRekognitionHandler.swift */,
+				A6E83DE1212C365D00644E9E /* ImagerReaderHandler.swift */,
+				A6E83DE3212C368600644E9E /* ImageHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -610,6 +625,7 @@
 				A6949F52212A799000E17558 /* LaunchScreen.storyboard in Resources */,
 				A6949F4F212A799000E17558 /* Assets.xcassets in Resources */,
 				A6949F4D212A798500E17558 /* Main.storyboard in Resources */,
+				A6E83DE8212C5F6500644E9E /* detect-analyze-faces-rekognition-sample2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,12 +689,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E83DE2212C365D00644E9E /* ImagerReaderHandler.swift in Sources */,
+				A6E83DEA212E848E00644E9E /* CaptureViewController.swift in Sources */,
 				A6E83D86212AC53200644E9E /* ImageSourceOptionsViewController.swift in Sources */,
+				A6E83DDF212C046B00644E9E /* FaceRekognitionHandler.swift in Sources */,
+				A6E83DE4212C368600644E9E /* ImageHandler.swift in Sources */,
 				A6E83DD6212AE98C00644E9E /* ImageWriteHandler.swift in Sources */,
 				A6949F4A212A798500E17558 /* OptionsViewController.swift in Sources */,
 				A6E83DD8212AFEB300644E9E /* CameraHandler.swift in Sources */,
 				A6E83DDA212BE8F300644E9E /* CameraViewController.swift in Sources */,
-				A6E83DDD212BFE1C00644E9E /* MatchPredicationViewController.swift in Sources */,
+				A6E83DDD212BFE1C00644E9E /* MatchPredictViewController.swift in Sources */,
 				A6949F48212A798500E17558 /* AppDelegate.swift in Sources */,
 				A6E83D82212AB10D00644E9E /* Constants.swift in Sources */,
 			);
@@ -854,6 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29V9632S7Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FaceRecognition/External/AWS",
@@ -876,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29V9632S7Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FaceRecognition/External/AWS",
