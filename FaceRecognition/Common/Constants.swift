@@ -8,12 +8,24 @@
 
 import Foundation
 
-struct AWSAccessKeys {
-    static let AccessKeyID = "AKIAJQPHXOLLTCAKC3YQ"
-    static let SecretAccessKey = "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"
+struct Constants {
+    
+    struct AWSAccessKeys {
+        static let AccessKeyID = "AccessKey"
+        static let SecretAccessKey = "SecretAccessKey"
+    }
+    
+    struct AWSCollection {
+        static let Name = "ImageCollections"
+        static let FaceMatchThreshold = 75
+        static let MaxFaces = 2
+    }
+    
+    struct ImageKeys {
+        static let PNGExtension = "png"
+        static let JPGEExtension = "jpge"
+        static let JPGEImageCompressionScale = 1.0
+    }
+    
 }
 
-
-struct ImageCompressionScale {
-    static let scale = 1.0
-}

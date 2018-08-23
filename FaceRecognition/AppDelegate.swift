@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import AWSRekognition
-import AWSCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let credentialsProvider = AWSStaticCredentialsProvider(accessKey:AWSAccessKeys.AccessKeyID , secretKey:AWSAccessKeys.SecretAccessKey)
-        let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        AWSService.defaultConfiguration()
         
         return true
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A64FEDF7212ED8EA00D5C5BC /* IAWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */; };
+		A64FEDF9212EE0E000D5C5BC /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF8212EE0E000D5C5BC /* AWSService.swift */; };
 		A6949F48212A798500E17558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6949F47212A798500E17558 /* AppDelegate.swift */; };
 		A6949F4A212A798500E17558 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6949F49212A798500E17558 /* OptionsViewController.swift */; };
 		A6949F4D212A798500E17558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6949F4B212A798500E17558 /* Main.storyboard */; };
@@ -210,6 +212,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAWSService.swift; sourceTree = "<group>"; };
+		A64FEDF8212EE0E000D5C5BC /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
 		A6949F44212A798500E17558 /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6949F47212A798500E17558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6949F49212A798500E17558 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +379,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A64FEDF5212ED84B00D5C5BC /* AWSServices */ = {
+			isa = PBXGroup;
+			children = (
+				A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */,
+				A64FEDF8212EE0E000D5C5BC /* AWSService.swift */,
+			);
+			path = AWSServices;
+			sourceTree = "<group>";
+		};
 		A6949F3B212A798500E17558 = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +412,7 @@
 		A6949F46212A798500E17558 /* FaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				A64FEDF5212ED84B00D5C5BC /* AWSServices */,
 				A6E83DD4212AE93E00644E9E /* Handlers */,
 				A6E83D83212AB7F000644E9E /* ViewControllers */,
 				A6E83D80212AB03800644E9E /* Common */,
@@ -690,12 +704,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6E83DE2212C365D00644E9E /* ImagerReaderHandler.swift in Sources */,
+				A64FEDF9212EE0E000D5C5BC /* AWSService.swift in Sources */,
 				A6E83DEA212E848E00644E9E /* CaptureViewController.swift in Sources */,
 				A6E83D86212AC53200644E9E /* ImageSourceOptionsViewController.swift in Sources */,
 				A6E83DDF212C046B00644E9E /* FaceRekognitionHandler.swift in Sources */,
 				A6E83DE4212C368600644E9E /* ImageHandler.swift in Sources */,
 				A6E83DD6212AE98C00644E9E /* ImageWriteHandler.swift in Sources */,
 				A6949F4A212A798500E17558 /* OptionsViewController.swift in Sources */,
+				A64FEDF7212ED8EA00D5C5BC /* IAWSService.swift in Sources */,
 				A6E83DD8212AFEB300644E9E /* CameraHandler.swift in Sources */,
 				A6E83DDA212BE8F300644E9E /* CameraViewController.swift in Sources */,
 				A6E83DDD212BFE1C00644E9E /* MatchPredictViewController.swift in Sources */,
