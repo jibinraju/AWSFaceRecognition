@@ -15,6 +15,8 @@ class MatchPredictViewController: UIViewController {
     @IBOutlet private weak var comparisonResultLabel: UILabel!
     
     var sourceImage: UIImage!
+    var awsService: AWSService!
+    var progressAlertViewController: UIAlertController!
 
     private let faceRekognitionHandler = FaceRekognitionHandler()
     private let imageReaderHandler = ImagerReaderHandler()
@@ -28,10 +30,14 @@ class MatchPredictViewController: UIViewController {
         }
         
         sourceImageView.image = sourceImage
-        if findMatching() == false {
+        comparisonResultLabel.text = "Searching for matching"
+        progressAlertViewController = CommonUtilities.showActivityAlert(title: "find the matching...")
+        present(progressAlertViewController, animated: true, completion: nil)
+        findMatchingRemotly()
+        /*if findMatching() == false {
             comparisonResultLabel.textColor = UIColor.red
             comparisonResultLabel.text = "Sorry, couldn't find the matching, please enroll"
-        }
+        }*/
     }
     
     private func findMatching() -> Bool {
@@ -52,5 +58,24 @@ class MatchPredictViewController: UIViewController {
         
         return false
     }
+    
+    private func findMatchingRemotly() {
 
+        awsService.findData(image: sourceImage) { (response, error) in
+            if response != nil && (response?.faceMatches?.count)! > 0 {
+                //self.targetImageView.image = image
+                self.comparisonResultLabel.textColor = UIColor.green
+                self.comparisonResultLabel.text = "Successfully find the matching!"
+            }
+            else if error != nil {
+                self.comparisonResultLabel.textColor = UIColor.red
+                self.comparisonResultLabel.text = error?.localizedDescription
+            }
+            else {
+                self.comparisonResultLabel.textColor = UIColor.red
+                self.comparisonResultLabel.text = "Sorry, couldn't find the matching, please enroll"
+            }
+            self.progressAlertViewController.dismiss(animated: true, completion: nil)
+        }
+    }
 }

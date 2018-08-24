@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A64FEDF7212ED8EA00D5C5BC /* IAWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */; };
 		A64FEDF9212EE0E000D5C5BC /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF8212EE0E000D5C5BC /* AWSService.swift */; };
+		A64FEDFB212FCD2A00D5C5BC /* CommonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDFA212FCD2A00D5C5BC /* CommonUtilities.swift */; };
 		A6949F48212A798500E17558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6949F47212A798500E17558 /* AppDelegate.swift */; };
 		A6949F4A212A798500E17558 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6949F49212A798500E17558 /* OptionsViewController.swift */; };
 		A6949F4D212A798500E17558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6949F4B212A798500E17558 /* Main.storyboard */; };
@@ -214,6 +215,7 @@
 /* Begin PBXFileReference section */
 		A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAWSService.swift; sourceTree = "<group>"; };
 		A64FEDF8212EE0E000D5C5BC /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
+		A64FEDFA212FCD2A00D5C5BC /* CommonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtilities.swift; sourceTree = "<group>"; };
 		A6949F44212A798500E17558 /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6949F47212A798500E17558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6949F49212A798500E17558 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				A6E83D81212AB10D00644E9E /* Constants.swift */,
+				A64FEDFA212FCD2A00D5C5BC /* CommonUtilities.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				A6E83DDA212BE8F300644E9E /* CameraViewController.swift in Sources */,
 				A6E83DDD212BFE1C00644E9E /* MatchPredictViewController.swift in Sources */,
 				A6949F48212A798500E17558 /* AppDelegate.swift in Sources */,
+				A64FEDFB212FCD2A00D5C5BC /* CommonUtilities.swift in Sources */,
 				A6E83D82212AB10D00644E9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FaceRecognition/ViewControllers/CameraViewController.swift"
-            timestampString = "556697702.322059"
+            timestampString = "556799311.257249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -26,23 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FaceRecognition/ViewControllers/CameraViewController.swift"
-            timestampString = "556697702.322533"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "configureCameraController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FaceRecognition/ViewControllers/CameraViewController.swift"
-            timestampString = "556697702.322596"
+            timestampString = "556799311.257463"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -58,7 +42,7 @@
                   moduleName = "FaceRecognition"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jibinraju/Projects/POC/AwsFaceRekognition/FaceRecognition/FaceRecognition/ViewControllers/CameraViewController.swift"
-                  timestampString = "556717086.140499"
+                  timestampString = "556799336.005414"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -73,7 +57,7 @@
                   moduleName = "FaceRecognition"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jibinraju/Projects/POC/AwsFaceRekognition/FaceRecognition/FaceRecognition/ViewControllers/CameraViewController.swift"
-                  timestampString = "556717086.143402"
+                  timestampString = "556799336.008315"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -122,7 +106,7 @@
                   moduleName = "FaceRecognition"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jibinraju/Projects/POC/AwsFaceRekognition/FaceRecognition/FaceRecognition/Handlers/CameraHandler.swift"
-                  timestampString = "556717086.160911"
+                  timestampString = "556799336.021066"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -137,7 +121,7 @@
                   moduleName = "FaceRecognition"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jibinraju/Projects/POC/AwsFaceRekognition/FaceRecognition/FaceRecognition/Handlers/CameraHandler.swift"
-                  timestampString = "556717086.163677"
+                  timestampString = "556799336.023765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -186,12 +170,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FaceRecognition/ViewControllers/MatchPredictViewController.swift"
-            timestampString = "556717085.926878"
+            timestampString = "556799311.257823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "findMatching()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "findMatchingRemotly()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FaceRecognition/ViewControllers/ImageSourceOptionsViewController.swift"
+            timestampString = "556799311.258042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

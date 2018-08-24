@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +28,7 @@
         <!--Options View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OptionsViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OptionsViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,14 +37,14 @@
                                 <rect key="frame" x="128.5" y="164" width="63" height="30"/>
                                 <state key="normal" title="Recogize"/>
                                 <connections>
-                                    <segue destination="I2z-05-zKc" kind="show" id="BC3-9w-Ogd"/>
+                                    <segue destination="I2z-05-zKc" kind="show" identifier="Recogize" id="BC3-9w-Ogd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-fX-JVN">
                                 <rect key="frame" x="123" y="244" width="74" height="30"/>
                                 <state key="normal" title="Enrollment"/>
                                 <connections>
-                                    <segue destination="fRS-Vt-fpy" kind="show" id="wU4-8t-Pkd"/>
+                                    <segue destination="fRS-Vt-fpy" kind="show" identifier="EnrollmentSegue" id="wU4-8t-Pkd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -216,8 +215,8 @@
                                     <constraint firstAttribute="height" constant="120" id="op6-pk-5wp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l92-Oh-EkX">
-                                <rect key="frame" x="139" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l92-Oh-EkX">
+                                <rect key="frame" x="6" y="290" width="308" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -227,6 +226,8 @@
                         <constraints>
                             <constraint firstItem="l92-Oh-EkX" firstAttribute="top" secondItem="WJY-SE-nRt" secondAttribute="bottom" priority="250" constant="50" id="8ev-qV-RP6"/>
                             <constraint firstItem="l92-Oh-EkX" firstAttribute="centerX" secondItem="Gk4-uK-Je2" secondAttribute="centerX" id="AzG-NO-V3e"/>
+                            <constraint firstItem="l92-Oh-EkX" firstAttribute="leading" secondItem="dL7-kN-Tqn" secondAttribute="leading" constant="6" id="BM2-AG-f2g"/>
+                            <constraint firstItem="dL7-kN-Tqn" firstAttribute="trailing" secondItem="l92-Oh-EkX" secondAttribute="trailing" constant="6" id="H91-ye-XWQ"/>
                             <constraint firstItem="WJY-SE-nRt" firstAttribute="top" secondItem="dL7-kN-Tqn" secondAttribute="top" priority="250" constant="100" id="ILq-46-Udb"/>
                             <constraint firstItem="WJY-SE-nRt" firstAttribute="leading" secondItem="dL7-kN-Tqn" secondAttribute="leading" constant="24" id="PcX-uJ-ZKw"/>
                             <constraint firstItem="dL7-kN-Tqn" firstAttribute="trailing" secondItem="AQM-yy-uqV" secondAttribute="trailing" constant="24" id="mUD-Nm-uOV"/>

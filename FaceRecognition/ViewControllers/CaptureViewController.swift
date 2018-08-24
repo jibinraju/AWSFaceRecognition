@@ -11,6 +11,7 @@ import UIKit
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var imagePickerController: UIImagePickerController!
+    var awsService: AWSService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     func showMatchPredictViewController(sourceImage: UIImage) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "MatchPredictViewController") as! MatchPredictViewController
+        controller.awsService = awsService
         controller.sourceImage = sourceImage
         self.show(controller, sender: self)
     }

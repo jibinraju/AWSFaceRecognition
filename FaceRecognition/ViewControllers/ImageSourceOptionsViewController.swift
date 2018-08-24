@@ -10,14 +10,11 @@ import UIKit
 
 class ImageSourceOptionsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var imagePickerController: UIImagePickerController!
+    private var imagePickerController: UIImagePickerController!
+    var awsService: AWSService!
+    var progressAlertViewController: UIAlertController!
     
     @IBOutlet weak var statusLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     @IBAction func onTouchCameraOptions(_ sender: UIButton) {
         imagePickerController = createImagePickerController(imagePickerSourceType: UIImagePickerControllerSourceType.camera)
@@ -49,18 +46,25 @@ class ImageSourceOptionsViewController: UIViewController, UIImagePickerControlle
     
     // MARK: UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true) {
+            self.progressAlertViewController = CommonUtilities.showActivityAlert(title: "Uploading the image to AWS backend...")
+            self.present(self.progressAlertViewController, animated: true, completion: nil)
+        }
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let imageWriterHandler = ImageWriterHandler(imageToSave: pickedImage)
-            if imageWriterHandler.save() {
-               statusLabel.textColor = UIColor.green
-                statusLabel.text = "Successfully Enrolled"
-            }
-            else {
-                statusLabel.textColor = UIColor.red
-                statusLabel.text = "Failed to Enrolled, Try again"
+            //let imageWriterHandler = ImageWriterHandler(imageToSave: pickedImage)
+            //if imageWriterHandler.save() {
+            awsService.sendData(image: pickedImage) { (awsRekognitionIndexFacesResponse, error) in
+                if error == nil {
+                    self.statusLabel.textColor = UIColor.green
+                    self.statusLabel.text = "Successfully Enrolled"
+                }
+                else {
+                    self.statusLabel.textColor = UIColor.red
+                    self.statusLabel.text = "Failed to Enrolled, Try again"
+                }
+                self.progressAlertViewController.dismiss(animated: true, completion: nil)
             }
         }
-        picker.dismiss(animated: true, completion: nil)
     }
     
 }
