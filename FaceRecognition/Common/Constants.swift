@@ -11,8 +11,8 @@ import Foundation
 struct Constants {
     
     struct AWSAccessKeys {
-        static let AccessKeyID = "AccessKey"
-        static let SecretAccessKey = "SecretAccessKey"
+        static let AccessKeyID = "AKIAJANAOTRFKXESTDUQ"
+        static let SecretAccessKey = "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"
     }
     
     struct AWSCollection {
