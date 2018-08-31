@@ -39,22 +39,35 @@ class CameraHandler: NSObject, AVCapturePhotoCaptureDelegate {
     
     var previewLayer: AVCaptureVideoPreviewLayer?
     
+    
     var flashMode = AVCaptureDevice.FlashMode.off
     var photoCaptureCompletionBlock: ((UIImage?, Error?) -> Void)?
     
-    override init() {
-        captureSession = AVCaptureSession()
-    }
+//    override init() {
+//        captureSession = AVCaptureSession()
+//    }
     
     func prepare(completionHandler: @escaping (Error?) -> Void) {
-        do {
-            try configureCaptureDevices()
-            try configureDeviceInputs()
-            try configurePhotoOutput()
-        }
+        DispatchQueue(label: "prepare").async {
+            do {
+                self.createCaptureSession()
+                try self.configureCaptureDevices()
+                try self.configureDeviceInputs()
+                try self.configurePhotoOutput()
+            }
+                
+            catch {
+                DispatchQueue.main.async {
+                    completionHandler(error)
+                }
+                
+                print("Failed to configure device inputs")
+                return
+            }
             
-        catch {
-            print("Failed to configure device inputs")
+            DispatchQueue.main.async {
+                completionHandler(nil)
+            }
         }
     }
     
@@ -94,6 +107,10 @@ class CameraHandler: NSObject, AVCapturePhotoCaptureDelegate {
         self.photoOutput?.capturePhoto(with: settings, delegate: self as AVCapturePhotoCaptureDelegate)
         self.photoCaptureCompletionBlock = completion
     }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        debugPrint("willBeginCaptureForResolvedSettings")
+    }
 
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error { self.photoCaptureCompletionBlock?(nil, error) }
@@ -106,11 +123,19 @@ class CameraHandler: NSObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishRecordingLivePhotoMovieForEventualFileAt outputFileURL: URL, resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        debugPrint("didFinishRecordingLivePhotoMovieForEventualFileAt")
+    }
+    
     // MARK: Private functions
+    
+    private func createCaptureSession() {
+        self.captureSession = AVCaptureSession()
+    }
     
     private func configureCaptureDevices() throws {
         
-        let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .unspecified)
+        let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
 
         let cameras = session.devices.compactMap { $0 }
         guard !cameras.isEmpty else { throw CameraControllerError.noCamerasAvailable }

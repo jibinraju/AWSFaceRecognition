@@ -32,9 +32,9 @@ class AWSService: IAWSService {
         
         request.collectionId = collectioName
         awsRekognitionClient.createCollection(request) { (response:AWSRekognitionCreateCollectionResponse?, error:Error?) in
-             DispatchQueue.main.sync {
-                completion(response, error)
-            }
+             //DispatchQueue.main.sync {
+            completion(response, error)
+            //}
         }
     }
     
@@ -51,9 +51,9 @@ class AWSService: IAWSService {
         rekognitionImage!.bytes = UIImageJPEGRepresentation(image, CGFloat(Constants.ImageKeys.JPGEImageCompressionScale))
         request.image = rekognitionImage 
         awsRekognitionClient.indexFaces(request) { (awsRekognitionIndexFacesResponse, error) in
-             DispatchQueue.main.sync {
+             //DispatchQueue.main.sync {
                 completion(awsRekognitionIndexFacesResponse, error)
-            }
+            //}
         }
     }
     
@@ -75,5 +75,4 @@ class AWSService: IAWSService {
             }
         }
     }
-    
 }

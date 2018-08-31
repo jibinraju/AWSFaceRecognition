@@ -37,7 +37,7 @@
                                 <rect key="frame" x="128.5" y="164" width="63" height="30"/>
                                 <state key="normal" title="Recogize"/>
                                 <connections>
-                                    <segue destination="I2z-05-zKc" kind="show" identifier="Recogize" id="BC3-9w-Ogd"/>
+                                    <segue destination="gcq-NP-Qts" kind="show" identifier="Recogize" id="C5l-LA-6c7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-fX-JVN">
@@ -68,11 +68,11 @@
             <objects>
                 <viewController id="gcq-NP-Qts" customClass="CameraViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bjQ-CF-tjd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fw-pI-ZHX">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIu-7o-39B" userLabel="FlashOnOff">
                                         <rect key="frame" x="268" y="8" width="44" height="44"/>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfz-sU-icq" userLabel="VideoIcon">
-                                        <rect key="frame" x="12" y="402" width="44" height="44"/>
+                                        <rect key="frame" x="12" y="358" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="814-GV-kDB"/>
                                             <constraint firstAttribute="width" constant="44" id="srg-7G-lFd"/>
@@ -108,7 +108,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAR-4p-PhV" userLabel="CaptureIcon">
-                                        <rect key="frame" x="133" y="384" width="55" height="55"/>
+                                        <rect key="frame" x="133" y="340" width="55" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="gQ3-hj-Zrw"/>
@@ -119,7 +119,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIt-P3-2d6" userLabel="CameraIcon">
-                                        <rect key="frame" x="12" y="342" width="44" height="44"/>
+                                        <rect key="frame" x="12" y="298" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="X7w-Fa-HGE"/>
                                             <constraint firstAttribute="width" constant="44" id="qnd-wd-1Sd"/>
@@ -152,6 +152,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5tg-3J-YkX"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="captureButton" destination="JAR-4p-PhV" id="A0d-79-9sP"/>
                         <outlet property="capturePreviewView" destination="9Fw-pI-ZHX" id="xl1-t6-TOj"/>
@@ -163,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fkn-k0-4Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1208" y="878"/>
+            <point key="canvasLocation" x="1207.5" y="877.5"/>
         </scene>
         <!--Capture View Controller-->
         <scene sceneID="han-6o-hoI">
@@ -174,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6i-xl-KpQ">
-                                <rect key="frame" x="133" y="144" width="55" height="30"/>
+                                <rect key="frame" x="133" y="100" width="55" height="30"/>
                                 <state key="normal" title="Capture"/>
                                 <connections>
                                     <action selector="OnTouchCapture:" destination="I2z-05-zKc" eventType="touchUpInside" id="3oJ-9N-Num"/>

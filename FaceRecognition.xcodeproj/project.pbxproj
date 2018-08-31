@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0774813E2137C220002F9893 /* AWSStreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774813D2137C220002F9893 /* AWSStreamService.swift */; };
+		07A3EC0D2136792F004E69F2 /* CreateCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3EC0C2136792F004E69F2 /* CreateCollection.swift */; };
 		A64FEDF7212ED8EA00D5C5BC /* IAWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */; };
 		A64FEDF9212EE0E000D5C5BC /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDF8212EE0E000D5C5BC /* AWSService.swift */; };
 		A64FEDFB212FCD2A00D5C5BC /* CommonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64FEDFA212FCD2A00D5C5BC /* CommonUtilities.swift */; };
@@ -213,6 +215,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0774813D2137C220002F9893 /* AWSStreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSStreamService.swift; sourceTree = "<group>"; };
+		07A3EC0C2136792F004E69F2 /* CreateCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCollection.swift; sourceTree = "<group>"; };
 		A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAWSService.swift; sourceTree = "<group>"; };
 		A64FEDF8212EE0E000D5C5BC /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
 		A64FEDFA212FCD2A00D5C5BC /* CommonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtilities.swift; sourceTree = "<group>"; };
@@ -386,6 +390,7 @@
 			children = (
 				A64FEDF6212ED8EA00D5C5BC /* IAWSService.swift */,
 				A64FEDF8212EE0E000D5C5BC /* AWSService.swift */,
+				0774813D2137C220002F9893 /* AWSStreamService.swift */,
 			);
 			path = AWSServices;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				A6E83DDE212C046B00644E9E /* FaceRekognitionHandler.swift */,
 				A6E83DE1212C365D00644E9E /* ImagerReaderHandler.swift */,
 				A6E83DE3212C368600644E9E /* ImageHandler.swift */,
+				07A3EC0C2136792F004E69F2 /* CreateCollection.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -707,7 +713,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6E83DE2212C365D00644E9E /* ImagerReaderHandler.swift in Sources */,
+				07A3EC0D2136792F004E69F2 /* CreateCollection.swift in Sources */,
 				A64FEDF9212EE0E000D5C5BC /* AWSService.swift in Sources */,
+				0774813E2137C220002F9893 /* AWSStreamService.swift in Sources */,
 				A6E83DEA212E848E00644E9E /* CaptureViewController.swift in Sources */,
 				A6E83D86212AC53200644E9E /* ImageSourceOptionsViewController.swift in Sources */,
 				A6E83DDF212C046B00644E9E /* FaceRekognitionHandler.swift in Sources */,
@@ -893,8 +901,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29V9632S7Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KS76T8PFJA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FaceRecognition/External/AWS",
@@ -907,6 +915,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jibinraju.FaceRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6c9645ad-16b3-4401-b75f-ddeb0a8fb777";
+				PROVISIONING_PROFILE_SPECIFIER = "Manish Dev Profile 2018-03-10";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -916,8 +926,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29V9632S7Q;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KS76T8PFJA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FaceRecognition/External/AWS",
@@ -930,6 +940,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jibinraju.FaceRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6c9645ad-16b3-4401-b75f-ddeb0a8fb777";
+				PROVISIONING_PROFILE_SPECIFIER = "Manish Dev Profile 2018-03-10";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

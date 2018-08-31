@@ -23,7 +23,8 @@ class CameraViewController: UIViewController {
     
     ///Allows the user to put the camera in video mode.
     @IBOutlet fileprivate var videoModeButton: UIButton!
-    
+    var awsService: AWSService!
+    var awsStreamServer: AWSStreamService!
     let cameraController = CameraHandler()
     
     override func viewDidLoad() {
@@ -91,6 +92,17 @@ private extension CameraViewController {
                 print(error ?? "Image capture error")
                 return
             }
+            
+            self.awsService.sendData(image: image, completion: { (response, error) in
+                if error != nil {
+                    debugPrint(error?.localizedDescription as Any)
+                } else {
+                    print("\(image) added")
+                    for faceRecord in (response?.faceRecords)! {
+                        print("Face detected: Faceid is \(String(describing: faceRecord.face?.faceId))")
+                    }
+                }
+            })
         }
     }
     

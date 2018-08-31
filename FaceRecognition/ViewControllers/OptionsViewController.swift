@@ -19,6 +19,9 @@ class OptionsViewController: UIViewController {
             if error != nil && (error! as NSError).code != 11 {
                 let alertViewController = CommonUtilities.showAlert(message: (error?.localizedDescription)!)
                 self.present(alertViewController, animated: true, completion: nil)
+            } else {
+                print("CollectionArn: \(String(describing: awsRekognitionCreateCollectionResponse?.collectionArn))")
+                print("Status code : \(String(describing: awsRekognitionCreateCollectionResponse?.statusCode))")
             }
         }
     }
@@ -29,7 +32,7 @@ class OptionsViewController: UIViewController {
             vc.awsService = awsService
         }
         else if segue.identifier == "Recogize" {
-            let vc = segue.destination as! CaptureViewController
+            let vc = segue.destination as! CameraViewController//CaptureViewController
             vc.awsService = awsService
         }
     }

@@ -16,7 +16,7 @@ struct Constants {
     }
     
     struct AWSCollection {
-        static let Name = "ImageCollections"
+        static let Name = "Name"
         static let FaceMatchThreshold = 75
         static let MaxFaces = 2
     }
@@ -25,6 +25,14 @@ struct Constants {
         static let PNGExtension = "png"
         static let JPGEExtension = "jpge"
         static let JPGEImageCompressionScale = 1.0
+    }
+    
+    struct StreamService  {
+        static let streamProcessorName = "streamProcessorName"
+        static let kvStreamArn = "kvStreamArn"
+        static let kdStreamArn = "kdStreamArn"
+        static let iamRoleArn = "iamRoleArn"
+        static let threshold: Float = 0.0
     }
     
 }
