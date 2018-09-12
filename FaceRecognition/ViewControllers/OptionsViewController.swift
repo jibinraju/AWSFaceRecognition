@@ -28,12 +28,14 @@ class OptionsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EnrollmentSegue" {
-            let vc = segue.destination as! ImageSourceOptionsViewController
+            let vc = segue.destination as! CameraViewController//ImageSourceOptionsViewController
             vc.awsService = awsService
+            vc.isEnrollment = true
         }
         else if segue.identifier == "Recogize" {
             let vc = segue.destination as! CameraViewController//CaptureViewController
             vc.awsService = awsService
+            vc.isEnrollment = false
         }
     }
     

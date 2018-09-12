@@ -26,7 +26,7 @@ extension IAWSService {
     
     static func defaultConfiguration() {
         let credentialsProvider = AWSStaticCredentialsProvider(accessKey:Constants.AWSAccessKeys.AccessKeyID , secretKey:Constants.AWSAccessKeys.SecretAccessKey)
-        let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.EUWest1, credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
     }
 }

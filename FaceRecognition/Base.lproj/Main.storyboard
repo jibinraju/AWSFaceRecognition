@@ -44,7 +44,7 @@
                                 <rect key="frame" x="123" y="244" width="74" height="30"/>
                                 <state key="normal" title="Enrollment"/>
                                 <connections>
-                                    <segue destination="fRS-Vt-fpy" kind="show" identifier="EnrollmentSegue" id="wU4-8t-Pkd"/>
+                                    <segue destination="gcq-NP-Qts" kind="show" identifier="EnrollmentSegue" id="ORD-8P-Zlh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +127,17 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="PhotoCameraIcon"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpA-d6-rn8">
+                                        <rect key="frame" x="140" y="188" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="h8f-92-7XK"/>
+                                            <constraint firstAttribute="height" constant="40" id="rAZ-Tw-87r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -136,7 +147,9 @@
                                     <constraint firstItem="JAR-4p-PhV" firstAttribute="centerX" secondItem="9Fw-pI-ZHX" secondAttribute="centerX" id="Gic-in-shc"/>
                                     <constraint firstAttribute="bottom" secondItem="JAR-4p-PhV" secondAttribute="bottom" constant="21" id="U88-NT-2CK"/>
                                     <constraint firstItem="tfz-sU-icq" firstAttribute="leading" secondItem="9Fw-pI-ZHX" secondAttribute="leading" constant="12" id="aBV-Yz-4MD"/>
+                                    <constraint firstItem="mpA-d6-rn8" firstAttribute="centerX" secondItem="9Fw-pI-ZHX" secondAttribute="centerX" id="bLy-qY-62B"/>
                                     <constraint firstAttribute="trailing" secondItem="mUe-CF-Jho" secondAttribute="trailing" constant="8" id="gZg-23-8ed"/>
+                                    <constraint firstItem="mpA-d6-rn8" firstAttribute="centerY" secondItem="9Fw-pI-ZHX" secondAttribute="centerY" id="kQH-0n-8nc"/>
                                     <constraint firstItem="XIu-7o-39B" firstAttribute="top" secondItem="9Fw-pI-ZHX" secondAttribute="top" constant="8" id="o9E-0n-8Ju"/>
                                     <constraint firstItem="mUe-CF-Jho" firstAttribute="top" secondItem="XIu-7o-39B" secondAttribute="bottom" constant="15" id="scZ-Nk-dKz"/>
                                     <constraint firstAttribute="trailing" secondItem="XIu-7o-39B" secondAttribute="trailing" constant="8" id="sgn-fW-Erl"/>
@@ -156,6 +169,7 @@
                     <connections>
                         <outlet property="captureButton" destination="JAR-4p-PhV" id="A0d-79-9sP"/>
                         <outlet property="capturePreviewView" destination="9Fw-pI-ZHX" id="xl1-t6-TOj"/>
+                        <outlet property="counterLabel" destination="mpA-d6-rn8" id="3oF-df-3Zv"/>
                         <outlet property="photoModeButton" destination="EIt-P3-2d6" id="bmc-QV-Ekj"/>
                         <outlet property="toggleCameraButton" destination="mUe-CF-Jho" id="ED8-zX-Z7a"/>
                         <outlet property="toggleFlashButton" destination="XIu-7o-39B" id="rYI-HI-VPG"/>
@@ -164,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fkn-k0-4Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.5" y="877.5"/>
+            <point key="canvasLocation" x="1230" y="904"/>
         </scene>
         <!--Capture View Controller-->
         <scene sceneID="han-6o-hoI">
@@ -255,21 +269,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxP-9J-rsC">
-                                <rect key="frame" x="133" y="184" width="54" height="30"/>
+                                <rect key="frame" x="133" y="140" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="onTouchCameraOptions:" destination="fRS-Vt-fpy" eventType="touchUpInside" id="rkU-VG-Ete"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ut-FN-j4Q">
-                                <rect key="frame" x="113" y="246" width="94" height="30"/>
+                                <rect key="frame" x="113" y="202" width="94" height="30"/>
                                 <state key="normal" title="Image Gallery"/>
                                 <connections>
                                     <action selector="onTouchImageGalleryOptions:" destination="fRS-Vt-fpy" eventType="touchUpInside" id="JZf-0U-65s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-bD-4EE">
-                                <rect key="frame" x="135.5" y="296" width="49.5" height="21"/>
+                                <rect key="frame" x="135.5" y="252" width="49.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -302,4 +316,7 @@
         <image name="VideoCameraIcon" width="24" height="24"/>
         <image name="defaultPersonImg" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ORD-8P-Zlh"/>
+    </inferredMetricsTieBreakers>
 </document>
